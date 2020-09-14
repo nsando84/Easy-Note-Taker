@@ -12,6 +12,8 @@ const logger = (req, res, next) => {
 app.use(logger)
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, '/')));
+console.log(__dirname)
 
 require('./routes/APIroutes')(app)
 require('./routes/htmlRoutes')(app)
