@@ -1,5 +1,5 @@
 const express = require('express')
-const note = require("../db/db.json")
+let note = require("../db/db.json")
 const fs = require('fs')
 const { v4: uuidv4 } = require('uuid');
 const { get } = require('http');
@@ -35,6 +35,27 @@ module.exports = app => {
             return res.json(newNote)
         }
     });
+
+
+    app.delete('/api/notes/:id', (req, res) => {
+        let query  = req.params.id
+        let deleteId = note.find(elem => elem.id === query)
+        if (deleteId) {
+            note = note.filter(elem => elem.id !== query)
+            let fixedData = JSON.stringify(note, null, 2)
+            fs.writeFile('./db/db.json', fixedData, function(err){
+                if (err) throw err
+            })
+            console.log(deleteId)
+            res.status(200).json(deleteId)
+        } else {
+            console.log("dasdas" + deleteId)
+            res.status(404).json({message: 'note does not exist'})
+        }
+        
+        
+        
+    })
 
 };
 
