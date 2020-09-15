@@ -10,7 +10,7 @@ srtBtn.on('click', () => {
             id: 'menuBar-div'
         });
         $(noteArea).append(menuBar)
-        createNote = $(`<button type="button" class="btn btn-link text-left addnote" id="myBtn">+ Add note</button>`)
+        createNote = $(`<a type="button" class="btn btn-link text-left addnote" id="myBtn"data-toggle="modal" data-target="#exampleModal">+ Add note</a>`)
         $(menuBar).append(createNote)
         ulNote = $('<ul>',{
           id: 'ul-note'
@@ -101,4 +101,3 @@ const getNotes = () => {
       }
     })
 };
-
