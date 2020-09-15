@@ -44,7 +44,6 @@ module.exports = app => {
                         updateMe.title = req.body.title
                         updateMe.text = req.body.text
                         let fixedData = JSON.stringify(note, null, 2)
-                        console.log(fixedData)
                         fs.writeFile('./db/db.json', fixedData, function(err){
                         if (err) throw err
                         

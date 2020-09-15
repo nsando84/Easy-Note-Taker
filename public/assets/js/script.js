@@ -16,7 +16,6 @@ srtBtn.on('click', () => {
           id: 'ul-note'
         })
         $(menuBar).append(ulNote)
-         
         getNotes()
     } 
 })
@@ -37,20 +36,39 @@ const deleteNote = (id) => {
       getNotes()
     }
   });
-  
 };
 
 $(document).on('click', '#edit-btn', function(e) {
   let optLet = $(this).parent()
   $(this).parent().siblings().prop('disabled', false).css('background-color', 'white')
-  let saveBtn = $(`<span class='save-btn' id="save-btn">Save</span>`)
+  $('#save-btn').toggle()
+  let saveBtn = $(`<span class='save-btn'id="save-btn">Save</span>`)
   if (optLet.children().length < 3) { $(optLet).prepend(saveBtn) }
 })
 
 $(document).on('click', '#save-btn', function(e) {
+  $(this).toggle()
+  $(this).parent().siblings().prop('disabled', false).css('background-color', 'rgb(247, 242, 202)')
   buttonTarget = $(this).parent().parent().attr('id')
-  console.log(buttonTarget)
+  titleTarget = $(this).parent().siblings('input').val()
+  textTarget = $(this).parent().siblings('textarea').val()
+  saveMe(buttonTarget, titleTarget, textTarget)
 })
+
+const saveMe = (id, title, text) => {
+  data =  {
+    'title': title,
+    'text': text
+  }
+  return $.ajax({
+    url: "api/notes/" + id,
+    method: "PUT",
+    data: data,
+    success: () => {
+      console.log('success')
+    }
+  });
+};
 
 
 
