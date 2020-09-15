@@ -11,7 +11,7 @@
       }
 
       .mainbg {
-          background-color: rgb(247, 236, 156);
+          background-color: rgb(249, 235, 250);
       }
 
       .addnote:focus  {
@@ -34,15 +34,11 @@
           padding: 0;
       }
 
-      
-
-      
-
       .title-class {
           margin: auto;
           display: block;
           width: 90%;
-          background-color: rgb(247, 242, 202);
+          background-color: white;
           outline: none;
           border: none;
           margin-top: 10px;
@@ -55,7 +51,7 @@
           margin: auto;
           display: block;
           width: 90%;
-          background-color: rgb(247, 242, 202);
+          background-color: white;
           outline: none;
           border: none;
           resize: none;
@@ -104,3 +100,10 @@
           border: 1px solid rgb(245, 225, 79);
       }
      
+      .text-color {
+        color: royalblue;
+      }
+
+      .lead-title {
+
+      }
