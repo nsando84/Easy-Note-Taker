@@ -2,6 +2,9 @@ const srtBtn = $('#get-started')
 const noteArea = $('#note-area')
 const addNote = $('#add-note')
 const menuBarDiv = $('#menuBar-div')
+const textValue = $('#new-text')
+const titleValue = $('#new-title')
+const submitNote = $('#submit-note')
 
 srtBtn.on('click', () => {
    if (noteArea.children().length == 0) {
@@ -21,8 +24,10 @@ srtBtn.on('click', () => {
 })
 
 
-
-$(document).on('click', '#delete-btn', () => {
+$(document).on('click', '#delete-btn', function(e) {
+    $(this).parent().parent().fadeOut(500,function(){
+      $(this).remove()
+    })
   buttonTarget = $(this).parent().parent().attr('id')
   deleteNote(buttonTarget)
 })
@@ -31,10 +36,6 @@ const deleteNote = (id) => {
   return $.ajax({
     url: "api/notes/" + id,
     method: "DELETE",
-    success: () => {
-      ulNote.empty()
-      getNotes()
-    }
   });
 };
 
@@ -65,10 +66,33 @@ const saveMe = (id, title, text) => {
     method: "PUT",
     data: data,
     success: () => {
-      console.log('success')
+      // console.log('success')
     }
   });
 };
+
+
+$(submitNote).on('click', function(e) {
+  if (titleValue.val().length == 0 || 
+  textValue.val().length == 0) {
+    console.log("enter values")
+  } else {
+    data = {
+      'title': titleValue.val(),
+      'text': textValue.val()
+    }
+    return $.ajax({
+      url: "api/notes/",
+      method: "POST",
+      data: data,
+      success: () => {
+        console.log('post success')
+        $('#form-reset').trigger('reset')
+        getNotes()
+        }
+    })
+  }
+})
 
 
 

@@ -27,7 +27,7 @@ module.exports = app => {
                 title: req.body.title,
                 text: req.body.text
             }
-            note.push(newNote)
+            note.unshift(newNote)
             let fixedData = JSON.stringify(note, null, 2)
             fs.writeFile('./db/db.json', fixedData, function(err){
                 if (err) throw err
