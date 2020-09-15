@@ -41,7 +41,7 @@ const deleteNote = (id) => {
 
 $(document).on('click', '#edit-btn', function(e) {
   let optLet = $(this).parent()
-  $(this).parent().siblings().prop('disabled', false).css('background-color', 'white')
+  $(this).parent().siblings().prop('disabled', false).css('border', '1px solid royalblue')
   if (optLet.children().length == 2) {
   let saveBtn = $(`<span class='save-btn'id="save-btn">Save</span>`)
     $(optLet).prepend(saveBtn) 
@@ -49,7 +49,7 @@ $(document).on('click', '#edit-btn', function(e) {
 })
 
 $(document).on('click', '#save-btn', function(e) {
-  $(this).parent().siblings().prop('disabled', true)
+  $(this).parent().siblings().prop('disabled', true).css('border', '0')
   buttonTarget = $(this).parent().parent().attr('id')
   titleTarget = $(this).parent().siblings('input').val()
   textTarget = $(this).parent().siblings('textarea').val()
