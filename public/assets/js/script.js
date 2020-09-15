@@ -23,9 +23,8 @@ srtBtn.on('click', () => {
 
 
 
-$(document).on('click', '#delete-btn', function(event) {
-  let buttonTarget = $(this).parent().parent().attr('id')
-  console.log(buttonTarget)
+$(document).on('click', '#delete-btn', () => {
+  buttonTarget = $(this).parent().parent().attr('id')
   deleteNote(buttonTarget)
 })
 
@@ -41,10 +40,16 @@ const deleteNote = (id) => {
   
 };
 
-$(document).on('click', '#edit-btn', function(event) {
-  let buttonTarget = $(this).parent().parent().attr('id')
-  let checkit = $(this).parent().siblings().prop('disabled', false)
-  console.log(checkit)
+$(document).on('click', '#edit-btn', function(e) {
+  let optLet = $(this).parent()
+  $(this).parent().siblings().prop('disabled', false).css('background-color', 'white')
+  let saveBtn = $(`<span class='save-btn' id="save-btn">Save</span>`)
+  if (optLet.children().length < 3) { $(optLet).prepend(saveBtn) }
+})
+
+$(document).on('click', '#save-btn', function(e) {
+  buttonTarget = $(this).parent().parent().attr('id')
+  console.log(buttonTarget)
 })
 
 

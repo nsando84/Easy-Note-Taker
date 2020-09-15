@@ -36,6 +36,23 @@ module.exports = app => {
         }
     });
 
+    app.put('/api/notes/:id', (req, res) => {
+            let query  = req.params.id
+            for (let i = 0; i < note.length; i++) {
+                    if (note[i].id === query) {
+                        let updateMe = note[i]
+                        updateMe.title = req.body.title
+                        updateMe.text = req.body.text
+                        let fixedData = JSON.stringify(note, null, 2)
+                        console.log(fixedData)
+                        fs.writeFile('./db/db.json', fixedData, function(err){
+                        if (err) throw err
+                        
+                        })
+                        res.status(200).json({message: 'changed'})
+                    } 
+            } 
+    });
 
     app.delete('/api/notes/:id', (req, res) => {
         let query  = req.params.id
@@ -46,17 +63,13 @@ module.exports = app => {
             fs.writeFile('./db/db.json', fixedData, function(err){
                 if (err) throw err
             })
-            console.log(deleteId)
             res.status(200).json(deleteId)
         } else {
             console.log("dasdas" + deleteId)
             res.status(404).json({message: 'note does not exist'})
         }
-        
-        
-        
     })
-
+    
 };
 
 
