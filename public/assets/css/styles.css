@@ -1,4 +1,11 @@
 
+      body {
+        margin: 0; 
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+      
+      }
+
       #wrapper {
           width: 800px;
           margin: auto;
@@ -8,6 +15,9 @@
 
       .jumbotron {
           text-align: center;
+          position: relative;
+          height: 250px;
+          border-radius: 20px;
       }
 
       .mainbg {
@@ -24,8 +34,9 @@
       
       li  {
           list-style-type: none;
-          border-top: 1px solid white;
+          border-top: 2px solid white;
           padding-bottom: 10px;
+          border-radius: 20px;
           
       }
 
@@ -70,6 +81,11 @@
 
       }
 
+      #menuBar-div {
+        border-radius: 20px;
+      }
+
+
       #option-div {
           text-align: right;
       }
@@ -105,5 +121,31 @@
       }
 
       .lead-title {
+        position: absolute;
+        top: 49%;
+        right: 30%;
+        letter-spacing: 2px;
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
 
+      .logo-brand {
+        margin-left: 15px;
+        font-weight: 900;
+      }
+
+      #myBtn {
+        margin-left: 27px;
+      }
+
+      .call-button {
+        position: relative;
+        margin-top: 30px;
+        border: 1px solid royalblue
+      }
+      @media (max-width: 600px) {
+        .navbar {
+          min-width: 800px;
+          
+        }
       }
