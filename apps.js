@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const PORT = process.env.PORT || 3050;
+const PORT = process.env.PORT 
 
 
 // const logger = (req, res, next) => {
