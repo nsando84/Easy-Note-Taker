@@ -88,6 +88,7 @@ $(submitNote).on('click', function(e) {
       success: () => {
         console.log('post success')
         $('#form-reset').trigger('reset')
+        $("#ul-note").empty()
         getNotes()
         }
     })
