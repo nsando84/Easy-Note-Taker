@@ -51,7 +51,7 @@
 
 #### This application is used to keep track of notes and saves as JSON.
 
-![Screen Shot 2020-09-15 at 6 07 34 PM](https://user-images.githubusercontent.com/67135603/93280450-88b93300-f77e-11ea-9875-61533bc5358a.png)
+![Screen Shot 2020-09-15 at 6 12 35 PM](https://user-images.githubusercontent.com/67135603/93280699-16951e00-f77f-11ea-8765-9686076ac35d.png)
 
 
 
