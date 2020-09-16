@@ -16,6 +16,8 @@
 
  #### Heroku deployed application ----> [***here***](https://hidden-lowlands-59388.herokuapp.com/)
  
+ #### Heroku Quick Notes API ----> [***here***](https://hidden-lowlands-59388.herokuapp.com/api/notes)
+ 
   ### Features in the applications:
   - This is a API note saving application. 
   - User can create, read, update or destroy data entered. (CRUD)
@@ -49,7 +51,7 @@
 
 #### This application is used to keep track of notes.
 
-![Screen Shot 2020-09-15 at 5 57 58 PM](https://user-images.githubusercontent.com/67135603/93280249-ff096580-f77d-11ea-910a-a89d5a4d0e66.png)
+
 
 
 ---
