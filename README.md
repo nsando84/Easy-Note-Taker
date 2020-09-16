@@ -1,7 +1,9 @@
 
   # **Quick Note**   ![Github All Releases](https://img.shields.io/github/contributors/nsando84/Easy-Note-Taker)   
 
- ![ss](https://user-images.githubusercontent.com/67135603/92559390-6034b480-f225-11ea-8f58-c0ab7ac66514.png)
+![Screen Shot 2020-09-15 at 5 48 33 PM](https://user-images.githubusercontent.com/67135603/93279688-b7cea500-f77c-11ea-94b9-5945f5c7ceb6.png)
+
+
 
 
 
