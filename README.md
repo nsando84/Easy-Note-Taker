@@ -49,7 +49,8 @@
 
 #### This application is used to keep track of notes.
 
-![ss2](https://user-images.githubusercontent.com/67135603/92559563-adb12180-f225-11ea-8518-dcce9111da44.png)
+![Screen Shot 2020-09-15 at 5 57 58 PM](https://user-images.githubusercontent.com/67135603/93280249-ff096580-f77d-11ea-910a-a89d5a4d0e66.png)
+
 
 ---
 
