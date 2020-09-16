@@ -14,7 +14,7 @@
 
   ### I was tasked with creating an API application that would successfuly fulfill any CRUD operations that the user may have. 
 
- #### Video of application ----> [***Click Here***](https://drive.google.com/file/d/1tfrydzmbzunIhys6xIpuzSJBISBlNSeu/view)
+ #### Heroku deployed application ----> [***here***](https://hidden-lowlands-59388.herokuapp.com/)
  
   ### Features in the applications:
   - This is a API note saving application. 
@@ -47,7 +47,7 @@
 
 ### **Usage**
 
-#### This application is used to create a team member profile through the terminal.
+#### This application is used to keep track of notes.
 
 ![ss2](https://user-images.githubusercontent.com/67135603/92559563-adb12180-f225-11ea-8518-dcce9111da44.png)
 
