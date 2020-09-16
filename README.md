@@ -49,9 +49,9 @@
 
 ### **Usage**
 
-#### This application is used to keep track of notes.
+#### This application is used to keep track of notes and saves as JSON.
 
-
+![Screen Shot 2020-09-10 at 8 12 09 PM](https://user-images.githubusercontent.com/67135603/93280387-5dcedf00-f77e-11ea-89e1-ceb464941af9.png)
 
 
 ---
