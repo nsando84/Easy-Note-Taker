@@ -20,7 +20,7 @@
  
   ### Features in the applications:
   - This is a API note saving application. 
-  - User can create, read, update or destroy data entered. (CRUD)
+  - User can create, read, update or delete data entered. (CRUD)
   - Mobile responsive design.
   - User can access the API data inside and outside the application.
 
